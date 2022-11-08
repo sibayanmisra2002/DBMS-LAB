@@ -13,29 +13,27 @@ Assignment_1;
 11. Write a query to drop multiple columns from the employee table.
 12. Write a query to rename table employee to emp
 
-create table employee(empno binary(10),ename varchar(10),designation varchar(10),salary binary(20));
-desc employee;
+1.create table employee(empno number(10),ename varchar(10),designation varchar(10),salary number(20));
 
-select * from employee;
-create table emp as select * from employee where 1>1;
+2. desc employee;
 
-select * from emp;
-create table emp1 as select * from emp where 1>1;
+3. create table emp as select * from employee;
 
-create table emp2 as select * from employee where 1=0;
+4. create table emp1 as select empno, salary from emp;
 
-alter table employee modify empno binary(6);
+5. create table emp2 as select * from employee;
 
-alter table employee modify ename varchar(20);
+6. alter table employee modify empno number(6);
+
+7. alter table employee modify ename varchar(20);
 alter table employee modify empno binary(12);
 
-alter table employee add (doj date);
+8. alter table employee add (doj date);
 
-alter table employee add (dept varchar(10),age binary(10));
+9. alter table employee add (dept varchar(10),age binary(10));
 
-alter table employee drop column age;
+10. alter table employee drop column age;
 
-alter table employee drop column doj;
-alter table employee drop column dept;
+11. alter table employee drop column doj, dept;
 
-alter table emp1 rename to employee1;
+12. alter table emp1 rename to employee1;
