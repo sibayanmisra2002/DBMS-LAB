@@ -1,5 +1,7 @@
 use assignment_8;
 
+Table create and value entry ... NIJE KOR BC
+
 1)
 i) CREATE TABLE Author (author_id number(10), author_name varchar2(20), author_city varchar2(20), author_country varchar2(20),
      primary key(author_id));
@@ -14,15 +16,16 @@ v) update catalogue1 set price=1.1* price where publisher1_id in (select publish
 
 2)
 
-iii)
-select customer_name from depositor where acc_no from account branch_name='main') group by acc_no having count(acceno)>2;
-iv)
-select customer_name from customer where acc_no in  (select acc_no from account where branch_name in (select branch_name from branch where branch_city like 'Bangalore'));
-v)
-Delete acc_no from account where branch_name in (select branch_name,branch_city from branch where branch_city like 'Bangalore' group by branch_city);
-3)iii)
-select c.custno, count(*) as no-of_orders,avg(o,ord_amt) as avg_order_amount from customer c, order1 o where o.customer=c.custno group by c.custno;
-iv)
-select s.orderno from shipment s, warehouse w where s.warehouse=w.warehouse and w.city='Bangalore' group by orderno having count(*) and not count(*)=0;
-v)
-delete from item where itemno=3;
+iii) select customer_name from depositor where acc_no from account branch_name='main') group by acc_no having count(acceno)>2;
+
+iv) select customer_name from customer where acc_no in  (select acc_no from account where branch_name in (select branch_name from branch where branch_city like 'Bangalore'));
+
+v) Delete acc_no from account where branch_name in (select branch_name,branch_city from branch where branch_city like 'Bangalore' group by branch_city);
+
+3)
+
+iii) select c.custno, count(*) as no-of_orders,avg(o,ord_amt) as avg_order_amount from customer c, order1 o where o.customer=c.custno group by c.custno;
+
+iv) select s.orderno from shipment s, warehouse w where s.warehouse=w.warehouse and w.city='Bangalore' group by orderno having count(*) and not count(*)=0;
+
+v) delete from item where itemno=3;
